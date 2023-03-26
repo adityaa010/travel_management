@@ -1,10 +1,3 @@
-<?php
-session_start();
-if(!isset($_SESSION['aname'])){
-  header('location:registration/admin.php');
-}
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,8 +8,8 @@ if(!isset($_SESSION['aname'])){
   <meta content="" name="description">
 
   <!-- Favicons -->
-  <link href="img/bus3.jpg" rel="icon">
-  <link href="img/bus3.jpg" rel="apple-touch-icon">
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet">
@@ -35,7 +28,7 @@ if(!isset($_SESSION['aname'])){
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
 
- 
+  
 </head>
 
 <body id="body">
@@ -67,10 +60,11 @@ if(!isset($_SESSION['aname'])){
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           <li class="menu-active"><a href="#body">Home</a></li>
-          <li><a href="booking.php">Check Booking</a></li>
-          <li><a href="bookingdetail.php">Journey Date</a></li>
-          <li><a href="#"><?php echo $_SESSION['aname'];?></a></li>
-          <li><a href="registration/logout.php">logout</a></li>
+          <li><a href="#about">About Us</a></li>
+          
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="registration/admin.php">Admin</a></li>
+          <li><a href="registration/login.php">login</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
@@ -84,7 +78,7 @@ if(!isset($_SESSION['aname'])){
     <div class="intro-content">
       <h2>Making <span>your Ride</span><br>happen!</h2>
       <div>
-        <a href="registration/busdetail.php" class="btn-get-started scrollto">Add Bus Details</a>
+        <a href="profile.php" class="btn-get-started scrollto">Ticket Book</a>
       </div>
     </div>
 
@@ -101,8 +95,8 @@ if(!isset($_SESSION['aname'])){
 
   </section><!-- #intro -->
 
-  <main id="main">
-       <section id="portfolio" class="wow fadeInUp">
+  <main id="main">  
+    <section id="portfolio" class="wow fadeInUp">
       <div class="container">
         <div class="section-header">
           <h2>Our Portfolio</h2>
@@ -230,7 +224,7 @@ if(!isset($_SESSION['aname'])){
       <div class="container">
         <div class="row">
           <div class="col-lg-6 about-img">
-            <img src="img/port3.jpg" alt="">
+             <img src="img/port3.jpg" alt="">
           </div>
 
          
@@ -241,20 +235,18 @@ if(!isset($_SESSION['aname'])){
 
    
 
- 
-  
+   
+    
   </main>
 
-  <!--==========================
-    Footer
-  ============================-->
+  
   <footer id="footer">
     <div class="container">
       <div class="copyright">
         &copy; Copyright <strong>Traveler</strong>. All Rights Reserved
       </div>
       <div class="credits">
-      
+       
         Designed by <a href="#">Bus Transport</a>
       </div>
     </div>
